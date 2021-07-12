@@ -1,0 +1,22 @@
+{
+  "name": "spanish-conjugator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seans98/spanish-conjugator.git"
+  },
+  "author": "Sean Su",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seans98/spanish-conjugator/issues"
+  },
+  "homepage": "https://github.com/seans98/spanish-conjugator#readme",
+  "dependencies": {
+    "conjugator": "^1.0.1"
+  }
+}
