@@ -1,13 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conjugated Verb</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Conjugated Verb</h1>
-    <p><%= kindOfVerb %> </p>
-    
-</body>
+    <h2>Indicative Mood</h2>
+    <table>
+      <tr>
+        <th>Pronoun</th>
+        <th>Present</th>
+        <th>Preterite</th>
+        <th>Imperfect</th>
+        <th>Conditional</th>
+        <th>Future</th>
+      </tr>
+      <tr>
+        <td>yo</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['present']['singular']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['preterite']['singular']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['imperfect']['singular']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb3['present']['singular']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['future']['singular']['first']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>tu</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['present']['singular']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['preterite']['singular']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['imperfect']['singular']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb3['present']['singular']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['future']['singular']['second']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>ella/el/Ud</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['present']['singular']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['preterite']['singular']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['imperfect']['singular']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb3['present']['singular']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['future']['singular']['third']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>nosotros</td>
+        <td><%- JSON.stringify(kindOfVerb['present']['plural']['first']) %></td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['preterite']['plural']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['imperfect']['plural']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb3['present']['plural']['first']) %>
+        </td>
+        <td><%- JSON.stringify(kindOfVerb['future']['plural']['first']) %></td>
+      </tr>
+      <tr>
+        <td>vosotros</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['present']['plural']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['preterite']['plural']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['imperfect']['plural']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb3['present']['plural']['second']) %>
+        </td>
+        <td><%- JSON.stringify(kindOfVerb['future']['plural']['second']) %></td>
+      </tr>
+      <tr>
+        <td>ella/ellos/Uds</td>
+        <td><%- JSON.stringify(kindOfVerb['present']['plural']['third']) %></td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['preterite']['plural']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb['imperfect']['plural']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb3['present']['plural']['third']) %>
+        </td>
+        <td><%- JSON.stringify(kindOfVerb['future']['plural']['third']) %></td>
+      </tr>
+    </table>
+    <h2>Subjunctive</h2>
+    <table>
+      <tr>
+        <th>Pronoun</th>
+        <th>Present</th>
+        <th>Imperfect (ra)</th>
+        <th>Imperfect (se)</th>
+        <th>Future</th>
+      </tr>
+      <tr>
+        <td>yo</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['present']['singular']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -ra']['singular']['first'])
+          %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -se']['singular']['first'])
+          %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['future']['singular']['first']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>tu</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['present']['singular']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -ra']['singular']['second'])
+          %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -se']['singular']['second'])
+          %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['future']['singular']['second']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>ella/el/Ud</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['present']['singular']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -ra']['singular']['third'])
+          %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -se']['singular']['third'])
+          %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['future']['singular']['third']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>nosotros</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['present']['plural']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -ra']['plural']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -se']['plural']['first']) %>
+        </td>
+        <td><%- JSON.stringify(kindOfVerb4['future']['plural']['first']) %></td>
+      </tr>
+      <tr>
+        <td>vosotros</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['present']['plural']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -ra']['plural']['second'])
+          %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -se']['plural']['second'])
+          %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['future']['plural']['second']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>ellas/ellos/Uds</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['present']['plural']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -ra']['plural']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb4['imperfect -se']['plural']['third']) %>
+        </td>
+        <td><%- JSON.stringify(kindOfVerb4['future']['plural']['third']) %></td>
+      </tr>
+    </table>
+    <h2>Imperative</h2>
+    <table>
+      <tr>
+        <th>Pronoun</th>
+        <th>Affirmative</th>
+        <th>Negative</th>
+      </tr>
+      <tr>
+        <td>yo</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>tu</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['affirmative']['singular']['second'])
+          %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['negative']['singular']['second']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Ud</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['affirmative']['singular']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['negative']['singular']['third']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>nosotros</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['affirmative']['plural']['first']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['negative']['plural']['first']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>vosotros</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['affirmative']['plural']['second']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['negative']['plural']['second']) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Uds</td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['affirmative']['plural']['third']) %>
+        </td>
+        <td>
+          <%- JSON.stringify(kindOfVerb2['negative']['plural']['third']) %>
+        </td>
+      </tr>
+    </table>
+    <h2>Perfect</h2>
+    <table>
+      <tr>
+        <th>Pronoun</th>
+        <th>Present</th>
+        <th>Preterite</th>
+        <th>Past</th>
+        <th>Conditional</th>
+        <th>Future</th>
+      </tr>
+      <tr>
+          <td>yo</td>
+          <td>Present</td>
+          <td>Preterite</td>
+          <td>Past</td>
+          <td>Conditional</td>
+          <td>Future</td>
+      </tr>
+      <tr>
+        <td>tu</td>
+        <td>Present</td>
+        <td>Preterite</td>
+        <td>Past</td>
+        <td>Conditional</td>
+        <td>Future</td>
+    </tr>
+    <tr>
+        <td>ella/el/Ud</td>
+        <td>Present</td>
+        <td>Preterite</td>
+        <td>Past</td>
+        <td>Conditional</td>
+        <td>Future</td>
+    </tr>
+    <tr>
+        <td>nosotros</td>
+        <td>Present</td>
+        <td>Preterite</td>
+        <td>Past</td>
+        <td>Conditional</td>
+        <td>Future</td>
+    </tr>
+    <tr>
+        <td>vosotros</td>
+        <td>Present</td>
+        <td>Preterite</td>
+        <td>Past</td>
+        <td>Conditional</td>
+        <td>Future</td>
+    </tr>
+    <tr>
+        <td>Uds</td>
+        <td>Present</td>
+        <td>Preterite</td>
+        <td>Past</td>
+        <td>Conditional</td>
+        <td>Future</td>
+    </tr>
+    </table>
+    <p><%- JSON.stringify(kindOfVerb) %></p>
+  </body>
 </html>

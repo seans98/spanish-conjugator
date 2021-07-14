@@ -1,4 +1,5 @@
 var conjugateVerb = require("conjugator/lib/conjugateVerb.js");
+var inflect = require("conjugator/lib/inflect.js");
 const { response } = require("express");
 const bodyParser = require("body-parser");
 
@@ -13,12 +14,16 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  var conjugatedVerb = conjugateVerb(req.body.verb, {
-    mood: "indicative"
+  var { indicative, imperative, conditional, subjunctive } = conjugateVerb(
+    req.body.verb
+  );
+  
+  res.render("conjugator", {
+    kindOfVerb: indicative,
+    kindOfVerb2: imperative,
+    kindOfVerb3: conditional,
+    kindOfVerb4: subjunctive,
   });
-//   conjugatedVerb = JSON.stringify(conjugatedVerb);
-//   res.render("conjugator", { kindOfVerb: conjugatedVerb });
-res.send(conjugatedVerb);
 });
 
 app.listen(3000, function () {
