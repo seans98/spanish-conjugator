@@ -17,13 +17,19 @@ app.post("/", function (req, res) {
   var { indicative, imperative, conditional, subjunctive } = conjugateVerb(
     req.body.verb
   );
-  
-  res.render("conjugator", {
-    kindOfVerb: indicative,
-    kindOfVerb2: imperative,
-    kindOfVerb3: conditional,
-    kindOfVerb4: subjunctive,
-  });
+
+  if (indicative['present']['singular']['first'] === indicative['present']['singular']['second']){
+      res.render("error", {errorVerb: req.body.verb})
+  } else {
+    res.render("conjugator", {
+        kindOfVerb: indicative,
+        kindOfVerb2: imperative,
+        kindOfVerb3: conditional,
+        kindOfVerb4: subjunctive,
+      });
+  }
+
+
 });
 
 app.listen(3000, function () {
