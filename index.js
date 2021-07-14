@@ -8,6 +8,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
+app.use("/styles", express.static(__dirname + '/styles'));
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
