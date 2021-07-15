@@ -1,4 +1,19 @@
 h1 {
-    text-align: center;
-    color: brown;
+  text-align: center;
+  padding: 30px 0px;
+}
+
+form {
+  text-align: center;
+}
+
+button {
+  margin-right: 10px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
 }

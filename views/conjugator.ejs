@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conjugated Verb</title>
+    <link rel="stylesheet" type="text/css" href="./styles/conjugated.css" />
+
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
   </head>
   <body>
-    <h1>Conjugated Verb</h1>
-    <h2>Indicative Mood</h2>
-    <table>
+    <h1 class="display-1">Conjugated Verb</h1>
+    <h2>Indicative</h2>
+    <table class="table table-striped">
       <tr>
         <th>Pronoun</th>
         <th>Present</th>
@@ -102,7 +110,7 @@
         <td><%- JSON.stringify(kindOfVerb['future']['plural']['second']) %></td>
       </tr>
       <tr>
-        <td>ella/ellos/Uds</td>
+        <td>ellas/ellos/Uds</td>
         <td><%- JSON.stringify(kindOfVerb['present']['plural']['third']) %></td>
         <td>
           <%- JSON.stringify(kindOfVerb['preterite']['plural']['third']) %>
@@ -117,7 +125,7 @@
       </tr>
     </table>
     <h2>Subjunctive</h2>
-    <table>
+    <table table class="table table-striped">
       <tr>
         <th>Pronoun</th>
         <th>Present</th>
@@ -221,7 +229,7 @@
       </tr>
     </table>
     <h2>Imperative</h2>
-    <table>
+    <table table class="table table-striped">
       <tr>
         <th>Pronoun</th>
         <th>Affirmative</th>
@@ -270,7 +278,7 @@
         </td>
       </tr>
       <tr>
-        <td>ellos/ellas/Uds</td>
+        <td>ellas/ellos/Uds</td>
         <td>
           <%- JSON.stringify(kindOfVerb2['affirmative']['plural']['third']) %>
         </td>
@@ -280,7 +288,7 @@
       </tr>
     </table>
     <h2>Perfect</h2>
-    <table>
+    <table table class="table table-striped">
       <tr>
         <th>Pronoun</th>
         <th>Present</th>
@@ -330,7 +338,7 @@
         <td> <%- JSON.stringify(kindOfVerb['future perfect']['plural']['second']) %></td>
     </tr>
     <tr>
-        <td>ellos/ellas/Uds</td>
+        <td>ellas/ellos/Uds</td>
         <td> <%- JSON.stringify(kindOfVerb['perfect']['plural']['third']) %></td>
         <td><%- JSON.stringify(kindOfVerb['preterite perfect']['plural']['third']) %></td>
         <td> <%- JSON.stringify(kindOfVerb['pluperfect']['plural']['third']) %></td>
@@ -339,7 +347,7 @@
     </tr>
     </table>
     <h2>Perfect Subjunctive</h2>
-    <table>
+    <table table class="table table-striped">
         <tr>
             <th>Pronoun</th>
             <th>Present</th>
@@ -377,7 +385,7 @@
             <td><%- JSON.stringify(kindOfVerb4['future perfect']['plural']['second']) %></td>
         </tr>
         <tr>
-            <td>ellos/ellas/Uds</td>
+            <td>ellas/ellos/Uds</td>
             <td><%- JSON.stringify(kindOfVerb4['perfect']['plural']['third']) %></td>
             <td><%- JSON.stringify(kindOfVerb4['pluperfect']['plural']['third']) %></td>
             <td><%- JSON.stringify(kindOfVerb4['future perfect']['plural']['third']) %></td>
